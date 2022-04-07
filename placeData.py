@@ -25,43 +25,7 @@ else:
 
 print("Results 1")
 f = open("final_pixels.csv","w")
-for line in final_pixels:
-	f.write(str(line))
-f.close()
-quit()
-
-
-# print("UserID Correlation:")
-# userIDs = []
-# for result in results1:
-# 	userIDRegistered = False
-# 	userID = result.split(",")[1]
-# 	for registeredUserID in userIDs:
-# 		if registeredUserID[0] == userID:
-# 			registeredUserID[1] = registeredUserID[1] + 1
-# 			userIDRegistered = True
-# 			break
-# 	if not userIDRegistered:
-# 		userIDs.append([userID,1])
-# 		userIDs = []
-
-pixels = [[0 for j in range(2000)]
-for i in range(2000)]
-print("Heatmap Data:")
 for i in range(2000):
 	for j in range(2000):
-		pixels[i][j] = 0
-for result in results1:
-	pixelRegistered = False
-	pixel = result.split(",")[3].split("\"")[1] + "," + result.split(",")[4].split("\"")[0]
-	for registeredPixel in pixels:
-		if registeredPixel[0] == pixel:
-			registeredPixel[1] = registeredPixel[1] + 1
-			pixelRegistered = True
-			break
-	if not pixelRegistered:
-		pixels.append([pixel,1])
-
-for pixel in pixels:
-	if pixel[1] != 0:
-		print(pixel)
+		f.write(str(final_pixels[i][j]))
+f.close()
