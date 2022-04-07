@@ -25,7 +25,9 @@ else:
 
 print("Results 1")
 f = open("final_pixels.csv","w")
-f.write(final_pixels)
+for line in final_pixels:
+	f.write(line)
+f.close()
 quit()
 
 
