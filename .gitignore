@@ -1,1 +1,2 @@
+# Don't want to send the 21GB of .csv to github, that would take a while to upload
 *.csv
